@@ -1,0 +1,33 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && ava",
+    "tsc": "tsc --watch",
+    "start": "pm2 start src/index.js --watch src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^7.3.0",
+    "koa": "^2.2.0",
+    "koa-better-body": "^3.0.2",
+    "koa-better-router": "^2.1.1",
+    "koa-bodyparser": "^2.5.0",
+    "koa-convert": "^1.2.0",
+    "koa-jwt": "^3.0.1",
+    "password-hash": "^1.2.2",
+    "qs": "^6.4.0",
+    "sequelize": "^3.30.2"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-router": "^7.0.22",
+    "@types/node": "^7.0.8",
+    "@types/sequelize": "^4.0.47",
+    "ava": "^0.18.2"
+  }
+}

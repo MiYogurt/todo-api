@@ -1,0 +1,22 @@
+"use strict";
+var Router = require("koa-better-router");
+var user_1 = require("./controller/user");
+var todo_1 = require("./controller/todo");
+var folder_1 = require("./controller/folder");
+var router = Router().loadMethods();
+exports.router = router;
+var api = Router({ prefix: '/api/v1' });
+exports.api = api;
+api.post('/register', user_1.default.register);
+api.post('/login', user_1.default.login);
+// api.addRoute('GET', 'register', UserController.register);
+api.get('/todo/:id', todo_1.default.show);
+api.post('/todo', todo_1.default.create);
+api.put('/todo/:id', todo_1.default.edit);
+api.del('/todo/:id', todo_1.default.delete);
+api.get('/folder/:id', folder_1.default.show);
+api.post('/folder', folder_1.default.create);
+api.put('/folder/:id', folder_1.default.edit);
+api.del('/folder/:id', folder_1.default.delete);
+api.extend(router);
+//# sourceMappingURL=router.js.map
